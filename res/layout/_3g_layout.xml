@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" 
+    	android:layout_toLeftOf="@+id/judgeview">
+    
+	    <LinearLayout
+	        android:id="@+id/layout_top"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:gravity="left"
+	        android:orientation="vertical" >
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="left"
+	            android:gravity="left" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:layout_weight="1"
+	                android:text="服务小区ID:"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_service"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dip"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:text="无"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="@dimen/_3GHorMarginLeft"
+	                android:layout_weight="1"
+	                android:text="位置区:"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize"/>
+	
+	            <TextView
+	                android:id="@+id/txt_location"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dip"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:text="无"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_marginLeft="@dimen/_3GHorMarginLeft"
+	                android:text="IMEI:"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize"
+	                android:textStyle="bold" />
+	
+	            <TextView
+	                android:id="@+id/txt_imei"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dip"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:text="无"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize"
+	                android:textStyle="bold" />
+	            
+	               <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_marginLeft="@dimen/_3GHorMarginLeft"
+	                android:text="是否校验:"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize"
+	                android:textStyle="bold" />
+	
+	            <TextView
+	                android:id="@+id/txt_correct"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dip"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:text="未校准"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize"
+	                android:textStyle="bold" />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_marginRight="10.0dip"
+	            android:layout_marginTop="@dimen/_3GHorMarginTop" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:text="信号强度: "
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <ProgressBar
+	                android:id="@+id/singal_strength"
+	                style="?android:progressBarStyleHorizontal"
+	                android:layout_width="@dimen/_3GProgressWidth"
+	                android:layout_height="@dimen/_3GProgressHeight"
+	                android:layout_gravity="center_vertical"
+	                android:max="100"
+	                android:progress="50" />
+	
+	            <TextView
+	                android:id="@+id/txtStrength"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:text="0dbm"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	            
+	            
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="500dip"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="1.0dip"
+	            android:layout_marginBottom="@dimen/_3GHorMarginTop"
+	            android:layout_marginTop="@dimen/_3GHorMarginTop" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:text="在用网络:    "
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_operator"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:text="无SIM卡"
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_singal_type"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5.0dip"
+	                android:text=""
+	                android:textAppearance="?android:textAppearanceLarge"
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	        </LinearLayout>
+	
+	        <com.zzx.factorytest.view.SignalView
+	            android:id="@+id/signalView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+	        </com.zzx.factorytest.view.SignalView>
+	
+	        <!-- <LinearLayout -->
+	        <!-- android:layout_width="fill_parent" -->
+	        <!-- android:layout_height="fill_parent" > -->
+	
+	
+	        <!-- <TextView -->
+	        <!-- android:layout_width="wrap_content" -->
+	        <!-- android:layout_height="wrap_content" -->
+	        <!-- android:text="" /> -->
+	        <!-- </LinearLayout> -->
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="10dip"
+	        android:orientation="vertical" >
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dip"
+	                android:text="2G在网时间: "
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_2g_time"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="0"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dip"
+	                android:text="3G在网时间: "
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_3g_time"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="0"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dip"
+	                android:text="2G切换次数: "
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_2g_switch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="2"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	
+	            <TextView
+	                
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dip"
+	                android:text="3G切换次数: "
+	                android:textSize="@dimen/_3GTestNormalTextSize" />
+	
+	            <TextView
+	                android:id="@+id/txt_3g_switch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="2"
+	                android:textColor="@color/red"
+	                android:textSize="@dimen/_3GTestBiggerTextSize" />
+	        </LinearLayout>
+	    </LinearLayout>
+    </RelativeLayout>
+    <com.zzx.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+    </com.zzx.factorytest.view.JudgeView>
+
+</RelativeLayout>

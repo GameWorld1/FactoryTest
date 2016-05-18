@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ImageTextButton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="测试结果"
+        android:textColor="@color/red"
+        android:textSize="30dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_magnetic"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="磁场测试"
+            android:src="@drawable/magnet" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_gravity"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="重力感应测试"
+            android:src="@drawable/gravity" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_vibrate"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="震动测试"
+            android:src="@drawable/vibrate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_keys"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="按键测试"
+            android:src="@drawable/button" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_sim"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="Sim卡测试"
+            android:src="@drawable/sim_card" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_sdcard"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="sd卡测试"
+            android:src="@drawable/sd_card" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_GPS"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="GPS测试"
+            android:src="@drawable/gps" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_radio"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="收音机测试"
+            android:src="@drawable/radio" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_bluetooch"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="蓝牙测试"
+            android:src="@drawable/bluetooth" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_wifi"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="WIFI测试"
+            android:src="@drawable/wifi" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_camera"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="摄像头测试"
+            android:src="@drawable/camera" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_headphone"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="听筒测试"
+            android:src="@drawable/headphone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_microphone"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="话筒测试"
+            android:src="@drawable/microphone" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_multi_touch"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="触屏测试"
+            android:src="@drawable/touch_screen" />
+
+        <com.zzx.factorytest.view.ImageTextButton
+            android:id="@+id/itb_light"
+            style="@style/test_result_Icon"
+            ImageTextButton:text="光感"
+            android:src="@drawable/light" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:onClick="btn_retest"
+        android:text="重新测试"
+        android:textSize="25dip" />
+
+</LinearLayout>

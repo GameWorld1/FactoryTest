@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <!-- The DB list text paint -->
+    <string name="power_view_grid_height">30</string>
+    <string name="power_view_paint_stroke_width">9.0</string>
+    <string name="power_view_paint_text_size">9.0</string>
+    <string name="power_view_paint_text_scalex">0.7</string>
+    <!-- The Current DB text paint -->
+    <string name="power_view_paint_db_stroke_width">3.0</string>
+    <string name="power_view_paint_db_text_size">12.0</string>
+    <string name="power_view_paint_db_text_scalex">2.0</string>
+    <string name="db_text_margin_top">10</string>
+    
+    <string name="power_view_mGridMarginVer">10</string>
+
+</resources>

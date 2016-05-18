@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="signal_index">
+        <item>@string/net_50</item>
+        <item>@string/net_65</item>
+        <item>@string/net_80</item>
+        <item>@string/net_95</item>
+        <item>@string/net_110</item>
+    </array>
+</resources>

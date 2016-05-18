@@ -1,0 +1,36 @@
+<resources>
+    
+	<!-- WifiStrengthView -->
+    <dimen name="wifitextsizes">15sp</dimen>
+	<dimen name="wifitextsizeg">20sp</dimen>
+	<dimen name="wifipadingleft">90sp</dimen>
+	<dimen name="wifipadingbottom">80sp</dimen>
+	<dimen name="wifitextpadingleft">50sp</dimen>
+	<dimen name="wificanvastext">10sp</dimen>
+	<dimen name="wifidrawtext">30sp</dimen>
+	
+	
+	<!-- GPSView -->
+	<dimen name="GPSpadingTop">100sp</dimen>
+	<dimen name="GPSpadingBottom">80sp</dimen>
+	<dimen name="GPSTextSizes">25sp</dimen>
+	<dimen name="GPSTextSizem">40sp</dimen>
+	<dimen name="GPSdrawTextLeft">0sp</dimen>
+	<dimen name="GPSdataRectLeft">0sp</dimen>
+	<dimen name="GPSnemaRect">50sp</dimen>
+	<dimen name="GPSbuttonHeight">100sp</dimen>
+	<dimen name="GPSbuttonWidth">130sp</dimen>
+	<dimen name="GPScircleRadio">15sp</dimen>
+	
+	<!-- SignalView -->
+	<dimen name="SignagraphWidth">600sp</dimen>
+	<dimen name="SignapadingLeft">30sp</dimen>
+	<!-- 3GTestView -->
+	<dimen name="_3GTestNormalTextSize">28.0sp</dimen>
+	<dimen name="_3GTestBiggerTextSize">32.0sp</dimen>
+	<dimen name="_3GHorMarginTop">60dp</dimen>
+	<dimen name="_3GHorMarginLeft">15dp</dimen>
+	
+	<dimen name="screenCanvasLabelSize">200sp</dimen>
+	
+</resources>

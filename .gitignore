@@ -1,0 +1,55 @@
+#Android generated
+bin
+gen
+
+# Java class files
+*.class
+
+# Built application files
+*.apk
+*.ap_
+
+# Android Studio Navigation editor temp files
+.navigation/
+captures/
+
+# Files for the Dalvik VM
+*.dex
+
+# Log Files
+*.log
+
+#Eclipse
+.project
+.classpath
+.settings
+proguard/
+
+#IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+out
+
+#Maven
+target
+release.properties
+pom.xml.*
+
+#Ant
+build.xml
+local.properties
+proguard.cfg
+
+#OSX
+.DS_Store
+
+# Gradle files
+.gradle/
+build/
+
+
+# Keystore files
+*.jks
+

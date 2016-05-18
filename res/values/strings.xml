@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="app_name">FactoryTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">工厂测试</string>
+    <string name="opened">已打开</string>
+    <string name="about_to_open">正在打开</string>
+    <string name="closed">已关闭</string>
+    <string name="about_to_close">正在关闭</string>
+    <string name="fail">失败</string>
+    <string name="unknown">未知</string>
+    <string name="carrier_cmcc">中国移动</string>
+    <string name="carrier_unicom">中国联通</string>
+    <string name="carrier_telecom">中国电信</string>
+    <string name="carrier_other">其他</string>
+    <string name="sim_no_exists">无SIM卡</string>
+    <string name="button_license">License</string>
+    <string name="button_homepage">Project</string>
+    <string name="mic_test">话筒测试</string>
+    <string name="net_50">-50</string>
+    <string name="net_65">-65</string>
+    <string name="net_80">-80</string>
+    <string name="net_95">-95</string>
+    <string name="net_110">-110</string>
+    <string name="net_value_longest">-100</string>
+    <string name="power_view_grid_height">50</string>
+    <!-- The DB list text paint -->
+    <string name="power_view_paint_stroke_width">5.0</string>
+    <string name="power_view_paint_text_size">15.0</string>
+    <string name="power_view_paint_text_scalex">1.5</string>
+    <!-- The Current DB text paint -->
+    <string name="power_view_paint_db_stroke_width">5.0</string>
+    <string name="power_view_paint_db_text_size">20.0</string>
+    <string name="power_view_paint_db_text_scalex">2.5</string>
+    <string name="db_text_margin_top">50</string>
+    <string name="power_view_mGridMarginVer">30</string>
+    <string name="string_recv_bimap_percent" formatted="false">正在上传图像：%d%%</string>
+    <string name="string_err_fail">指令处理失败</string>
+    <string name="string_err_connection">设备已断开连接</string>
+    <string name="string_err_verify">与指定编号的指纹验证失败</string>
+    <string name="string_err_identify">当前输入的指纹不存在</string>
+    <string name="string_err_tmpl_empty">当前指定的id不存在</string>
+    <string name="string_err_tmpl_not_empty">当前指定的id已存在</string>
+    <string name="string_err_all_tmpl_empty">当前id没有注册</string>
+    <string name="string_err_tmpl_empty_no_exist">指纹信息已存满</string>
+    <string name="string_err_tmpl_broken_no_exist">没有检测到损坏的指纹</string>
+    <string name="string_err_tmp_invalid">指定的指纹信息无效</string>
+    <string name="string_err_tmp_duplication">该指纹已注册</string>
+    <string name="string_err_bad_qualy">指纹图像质量不佳</string>
+    <string name="string_err_merge_failed">指纹合成失败</string>
+    <string name="string_err_auth">没有进行通讯密码确认</string>
+    <string name="string_err_memory">外部 Flash 烧写出错</string>
+    <string name="string_err_invalid_tmpl_id">id值无效</string>
+    <string name="string_err_invalid_param">请求参数无效</string>
+    <string name="string_err_time_out">指纹输入超时</string>
+    <string name="string_err_gen_count">指纹合成个数无效</string>
+    <string name="string_err_invalid_buffer_id">buffer id值无效</string>
+    <string name="string_err_invalid_operation_mode">无效操作</string>
+    <string name="string_err_not_detectd">当前没有检测到指纹输入</string>
+    <string name="string_err_cancel">当前操作已被手动取消</string>
+    <string name="string_err_unknow">出现未知错误</string>
+    <string name="string_err_code_format" formatted="false">（错误代码：%s）</string>
+
+    <!-- NFC -->
+    <string name="name_bkcat_soc">社会科学</string>
+    <string name="name_bkcat_sci">自然科学</string>
+    <string name="name_bkcat_ltr">文学</string>
+    <string name="name_octopuscard">八达通卡（香港）</string>
+    <string name="name_szt">深圳通卡</string>
+    <string name="name_szt_f">深圳通卡（旧版）</string>
+    <string name="name_lnt">岭南通卡（羊城通）</string>
+    <string name="name_wht">武汉城市一卡通</string>
+    <string name="name_cac">长安通卡</string>
+    <string name="name_bj">北京市政交通卡</string>
+    <string name="name_bj_m">北京市政交通卡（旧版）</string>
+    <string name="name_unknowntag">未知的电子标签</string>
+    <string name="name_szlib_center">深圳图书馆（市民中心）</string>
+    <string name="name_szlib_nanshan">深圳图书馆（南山）</string>
+    <string name="name_lib_readercard">读者证</string>
+    <string name="name_lib_booktag">书籍标签</string>
+    <string name="lab_id">标识：</string>
+    <string name="lab_pmm">参数：</string>
+    <string name="lab_serl">序号：</string>
+    <string name="lab_ver">版本：</string>
+    <string name="lab_date">生效：</string>
+    <string name="lab_op">使用：</string>
+    <string name="lab_log">交易记录：</string>
+    <string name="lab_balance">余额：</string>
+    <string name="lab_cur_cny">元</string>
+    <string name="lab_cur_hkd">港币</string>
+    <string name="lab_op_time">次</string>
+    <string name="lab_user_id">读者证号：</string>
+    <string name="lab_bktg_sn">书籍编号：</string>
+    <string name="lab_bkcat">书籍类别：</string>
+    <string name="tip_nfc_notfound">没有NFC硬件！</string>
+    <string name="tip_nfc_disabled">NFC已禁用</string>
+    <string name="tip_nfc_enabled">NFC已启用</string>
+    <string name="msg_nonfc">没有找到NFC硬件，程序无法工作！</string>
+    <string name="msg_nfcdisabled">NFC已被禁用，请先启用该硬件。可以使用下边的 ‘设置’ 按钮控制NFC传感器的开关。</string>
+    <string name="msg_nocard">没有卡片信息，请将卡片靠近手机后盖尝试重新读取。</string>
+    <string name="msg_copied">卡片信息已经复制到剪贴板</string>
+    <string name="setting_NFC">设置</string>
+
+    <!-- 北斗，GPS -->
+    <string name="beidou_btn">点击切换GPS模式\n(当前为北斗模式)</string>
+    <string name="GPS_btn">点击切换北斗模式\n(当前为GPS模式)</string>
+
+
+    <!-- 光线、距离测试 -->
+    <string name="light_number">光照强度:</string>
+    <string name="proximity_number">距&#160;&#160;离:</string>
+    <string name="title_activity_gyroscope">GyroscopeActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- MainActivtiy  -->
+    <string name="platform_name" formatted="false">%s&#160;Version:%s\n%s</string>
+
+
+    <!-- 3GActivity  -->
+    <string name="calibration">已校准</string>
+    <string name="no_calibration">未校准</string>
+
+
+    <!-- 陀螺仪测试 -->
+    <string name="gyroscope_x">X:%f</string>
+    <string name="gyroscope_y">Y:%f</string>
+    <string name="gyroscope_z">Z:%f</string>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10.0dip"
+        android:text="SDcard卡测试"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/red" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/sd_card" />
+
+        <LinearLayout
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="可用空间 :"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/txt_sd_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="0MB"
+                      android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                      android:singleLine="true"
+                    android:gravity="left"
+                    android:text="SDCard卡容量:"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/txt_sd_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                      android:singleLine="true"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="0MB"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                      android:singleLine="true"
+                    android:text="SDCard2卡容量:"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/txt_sd2_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                      android:singleLine="true"
+                    android:text="0MB"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.zzx.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+    </com.zzx.factorytest.view.JudgeView>
+
+</RelativeLayout>

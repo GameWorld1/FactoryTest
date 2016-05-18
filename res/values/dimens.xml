@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- WifiStrengthView -->
+    <dimen name="wifitextsizes">15sp</dimen>
+    <dimen name="wifitextsizeg">20sp</dimen>
+    <dimen name="wifipadingleft">90sp</dimen>
+    <dimen name="wifipadingbottom">80sp</dimen>
+    <dimen name="wifitextpadingleft">50sp</dimen>
+    <dimen name="wificanvastext">10sp</dimen>
+    <dimen name="wifidrawtext">30sp</dimen>
+
+    <!-- GPSView -->
+    <dimen name="GPSpadingTop">100sp</dimen>
+    <dimen name="GPSpadingBottom">80sp</dimen>
+    <dimen name="GPSTextSizes">25sp</dimen>
+    <dimen name="GPSTextSizem">40sp</dimen>
+    <dimen name="GPSdrawTextLeft">0sp</dimen>
+    <dimen name="GPSdataRectLeft">0sp</dimen>
+    <dimen name="GPSnemaRect">50sp</dimen>
+    <dimen name="GPSbuttonHeight">100sp</dimen>
+    <dimen name="GPSbuttonWidth">130sp</dimen>
+    <dimen name="GPScircleRadio">15sp</dimen>
+    <dimen name="GPSColorBarWidth">15sp</dimen>
+    <dimen name="GPSSingalGap">10sp</dimen>
+    <dimen name="GPSPadingLeft">20sp</dimen>
+    <dimen name="GPSPadingRinght">20sp</dimen>
+    <dimen name="GPSColorBarpadingLeft">20sp</dimen>
+    <dimen name="GPSColorBarpadingTop">40sp</dimen>
+    <dimen name="GPSTimeHeight">60sp</dimen>
+
+    <!-- SignalView -->
+    <dimen name="SignagraphWidth">600sp</dimen>
+    <dimen name="SignapadingLeft">30sp</dimen>
+
+    <!-- 3GTestView -->
+    <dimen name="_3GTestNormalTextSize">12.0sp</dimen>
+    <dimen name="_3GTestBiggerTextSize">15.0sp</dimen>
+    <dimen name="_3GHorMarginTop">50dp</dimen>
+    <dimen name="_3GHorMarginLeft">10dp</dimen>
+    <dimen name="_3GProgressWidth">300dp</dimen>
+    <dimen name="_3GProgressHeight">20dp</dimen>
+
+    <!-- NFC -->
+    <dimen name="btn_height">50dp</dimen>
+    <dimen name="btn_width">100dp</dimen>
+    <dimen name="btn_margin">-3dp</dimen>
+    <dimen name="pnl_margin">6dp</dimen>
+    <dimen name="text_small">20dp</dimen>
+    <dimen name="text_middle">25dp</dimen>
+    <dimen name="text_big">30dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

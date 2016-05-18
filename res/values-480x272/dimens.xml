@@ -1,0 +1,32 @@
+<resources>
+    
+    <!-- WifiStrengthView -->
+	<dimen name="wifitextsizes">12sp</dimen>
+	<dimen name="wifitextsizeg">15sp</dimen>
+	<dimen name="wifipadingleft">50sp</dimen>
+	<dimen name="wifipadingbottom">40sp</dimen>
+	<dimen name="wifitextpadingleft">25sp</dimen>
+	<dimen name="wificanvastext">5sp</dimen>
+	<dimen name="wifidrawtext">20sp</dimen>
+	
+	
+	<!-- GPSView -->
+	<dimen name="GPSpadingTop">30sp</dimen>
+	<dimen name="GPSpadingBottom">30sp</dimen>
+	<dimen name="GPSTextSizes">15sp</dimen>
+	<dimen name="GPSTextSizem">20sp</dimen>
+	<dimen name="GPSdrawTextLeft">30sp</dimen>
+	<dimen name="GPSdataRectLeft">30sp</dimen>
+	<dimen name="GPSnemaRect">20sp</dimen>
+	<dimen name="GPSbuttonHeight">50sp</dimen>
+	<dimen name="GPSbuttonWidth">50sp</dimen>
+	<dimen name="GPScircleRadio">10sp</dimen>
+	<dimen name="GPSColorBarpadingLeft">20sp</dimen>
+	
+	<!-- SignalView -->
+	<dimen name="SignagraphWidth">300sp</dimen>
+	<dimen name="SignapadingLeft">20sp</dimen>
+	
+	
+	<dimen name="screenCanvasLabelSize">100sp</dimen>
+</resources>

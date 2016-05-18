@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10.0dip"
+        android:gravity="center_horizontal"
+        android:text="摄像头测试"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/red" />
+
+    <com.zzx.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+    </com.zzx.factorytest.view.JudgeView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_toLeftOf="@+id/judgeview"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <com.zzx.factorytest.view.Preview
+            android:id="@+id/camera_preview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+        </com.zzx.factorytest.view.Preview>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btn_switch"
+                android:text="切换摄像头" />
+
+            <CheckBox
+                android:id="@+id/cb_openFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip"
+                android:text="打开闪光灯" />
+
+            <Button
+                android:id="@+id/btnAF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="自动对焦" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
