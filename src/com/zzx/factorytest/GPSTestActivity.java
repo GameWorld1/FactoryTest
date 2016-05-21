@@ -74,7 +74,7 @@ public class GPSTestActivity extends TestItemBaseActivity implements
         addListener();
 
         gpsManager.stopGPS();
-//        gpsManager.startBeiDou();
+        gpsManager.startBeiDou();
 
         gpsManager.startGPS();
 
@@ -188,7 +188,7 @@ public class GPSTestActivity extends TestItemBaseActivity implements
     protected void onDestroy() {
         super.onDestroy();
         gpsManager.stopGPS();
-//        gpsManager.stopBeiDou();
+        gpsManager.stopBeiDou();
         gpsManager.getLocationManager().removeGpsStatusListener(this);
         gpsManager.getLocationManager().removeUpdates(this);
         gpsManager.getLocationManager().removeNmeaListener(this);
