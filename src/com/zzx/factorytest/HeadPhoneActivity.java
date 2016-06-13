@@ -28,7 +28,7 @@ public class HeadPhoneActivity extends TestItemBaseActivity {
 			mMediaPlayer.setLooping(true);
 			mMediaPlayer.stop();
 			mMediaPlayer.prepare();
-			/* ��ʼ���� */
+			/* 开始播放 */
 			mMediaPlayer.start();
 		} catch (Exception e) {
 
@@ -40,7 +40,7 @@ public class HeadPhoneActivity extends TestItemBaseActivity {
 
 	@Override
 	protected void onStop() {
-		audioManager.setMode(AudioManager.MODE_NORMAL);// ��ģʽ������Ͳ����ģʽ
+		audioManager.setMode(AudioManager.MODE_NORMAL);// 把模式调成听筒放音模式
 		mMediaPlayer.stop();
 		super.onStop();
 	}
@@ -49,7 +49,7 @@ public class HeadPhoneActivity extends TestItemBaseActivity {
 		AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 		int max = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
 		audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, max, 0);
-		Toast.makeText(this, "�ɹ�", 0).show();
+		Toast.makeText(this, "成功", 0).show();
 	}
 
 }

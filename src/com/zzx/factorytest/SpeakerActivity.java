@@ -45,7 +45,7 @@ public class SpeakerActivity extends TestItemBaseActivity {
 		AudioManager audioManager=(AudioManager) getSystemService(Context.AUDIO_SERVICE);
 		int max=audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
 		audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, max, 0);
-		Toast.makeText(this, "�ɹ�", 0).show();
+		Toast.makeText(this, "成功", Toast.LENGTH_SHORT).show();
 	}
 
 
