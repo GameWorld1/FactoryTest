@@ -128,6 +128,10 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.addSubMenu(1, 1, 1, "重新生成配置文件");
+
+
+
+
         return true;
     }
 
