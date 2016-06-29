@@ -267,6 +267,7 @@ public class FactoryTestManager {
         TestItem nfc = new TestItem(NfcTestActivity.class, R.drawable.reg,
                 ITEM_NFC, "NFC测试", false);
         add2List(nfc);
+
     }
 
     private void add2List(TestItem item) {
