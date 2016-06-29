@@ -264,9 +264,9 @@ public class FactoryTestManager {
 //                ITEM_FINGERPRINT, "指纹识别", false);
 //        add2List(fp);
 //
-//        TestItem nfc = new TestItem(NfcTestActivity.class, R.drawable.reg,
-//                ITEM_NFC, "NFC测试", false);
-//        add2List(nfc);
+        TestItem nfc = new TestItem(NfcTestActivity.class, R.drawable.reg,
+                ITEM_NFC, "NFC测试", false);
+        add2List(nfc);
     }
 
     private void add2List(TestItem item) {

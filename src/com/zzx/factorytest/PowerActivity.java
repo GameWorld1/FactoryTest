@@ -1,9 +1,5 @@
 package com.zzx.factorytest;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.math.BigDecimal;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +10,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.math.BigDecimal;
+import java.util.HashMap;
+
 public class PowerActivity extends TestItemBaseActivity {
 
     private TextView tv_message;
@@ -21,16 +22,32 @@ public class PowerActivity extends TestItemBaseActivity {
     private final float AUTO_TEST_RANGE = 3.5f;// 自动测试界限值
     private final int AUTO_TEST_MINI_SHOW_TIME = 2;// 自动测试超时时间
 
+    private HashMap<String, String> mMaps = new HashMap<String, String>();
+    private String mPath;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams. FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.power_layout);
         tv_message = (TextView) findViewById(R.id.tv_message);
+
+        push();
+        mPath = mMaps.get(MainActivity.CURRENT_PLATFORM);
+
         registerReceiver(mBatInfoReceiver, new IntentFilter(
                 Intent.ACTION_BATTERY_CHANGED));
 
         super.onCreate(savedInstanceState);
+    }
+
+    private void push() {
+
+        mMaps.put("M3089", "/sys/devices/platform/mt6320-battery/FG_Battery_CurrentConsumption");
+        mMaps.put("T80", "");
+        mMaps.put("S50", "");
+        mMaps.put("M4082", "");
+
     }
 
     @Override
@@ -50,19 +67,20 @@ public class PowerActivity extends TestItemBaseActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-			/*
-			 * 如果捕捉到的action是ACTION_BATTERY_CHANGED， 就运行onBatteryInfoReceiver()
+            /*
+             * 如果捕捉到的action是ACTION_BATTERY_CHANGED， 就运行onBatteryInfoReceiver()
 			 */
             if (Intent.ACTION_BATTERY_CHANGED.equals(action)) {
                 // int n = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0); //
                 // 目前电量
                 int v = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, 0); // 电池电压
-                float current=0;
+                float current = 0;
                 try {
-                    BufferedReader br=new BufferedReader(new FileReader("/sys/devices/platform/mt6329-battery/FG_Battery_CurrentConsumption"));
-                    String value=br.readLine();
-                    if(value!=null&&!"".equals(value)){
-                        current=Float.parseFloat(value)/10;
+
+                    BufferedReader br = new BufferedReader(new FileReader(mPath));
+                    String value = br.readLine();
+                    if (value != null && !"".equals(value)) {
+                        current = Float.parseFloat(value) / 10;
                     }
                     br.close();
                 } catch (Exception e) {
@@ -78,7 +96,7 @@ public class PowerActivity extends TestItemBaseActivity {
                 BigDecimal bg = new BigDecimal((level * 100 / scale));
                 double f1 = bg.setScale(2, BigDecimal.ROUND_HALF_UP)
                         .doubleValue();
-                tv_message.setText("电压: " + v + "mV\n\n 电流: "+current+"mA\n\n 电量 : " + f1 + "%\n");
+                tv_message.setText("电压: " + v + "mV\n\n 电流: " + current + "mA\n\n 电量 : " + f1 + "%\n");
 
                 if (v >= AUTO_TEST_RANGE) {
                     synchronized (this) {
