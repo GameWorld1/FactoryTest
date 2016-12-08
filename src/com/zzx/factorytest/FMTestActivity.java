@@ -13,42 +13,42 @@ import com.zzx.factorytest.utils.CommonUtils;
 
 public class FMTestActivity extends TestItemBaseActivity {
 
-	private TextView txtFmResult;
+    private TextView txtFmResult;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams. FLAG_FULLSCREEN);
-		setContentView(R.layout.fm_layout);
-		txtFmResult = (TextView) findViewById(R.id.txtFmResult);
-		super.onCreate(savedInstanceState);
-		openFM();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.fm_layout);
+        txtFmResult = (TextView) findViewById(R.id.txtFmResult);
+        super.onCreate(savedInstanceState);
+        openFM();
 
-	}
+    }
 
-	public void btnFMTest(View view) {
-		openFM();
-	}
+    public void btnFMTest(View view) {
+        openFM();
+    }
 
-	private void openFM() {
-		Intent fmIntent = new Intent();
-		fmIntent.putExtra("freq", "97.1");
-		fmIntent.setComponent(new ComponentName("com.mediatek.FMRadio",
-				"com.mediatek.FMRadio.FMRadioActivity"));
-		if (CommonUtils.checkAppInstalled(fmIntent, this)) {
-			startActivityForResult(fmIntent, 0);
-		}else {
-			Toast.makeText(this, "FMӦ��δ��װ", 0).show();
-			onSelectResult(false);
-			finish();
-		}
+    private void openFM() {
+        Intent fmIntent = new Intent();
+        fmIntent.putExtra("freq", "97.1");
+        fmIntent.setComponent(new ComponentName("com.mediatek.fmradio",
+                "com.mediatek.fmradio.FmRadioActivity"));
+        if (CommonUtils.checkAppInstalled(fmIntent, this)) {
+            startActivityForResult(fmIntent, 0);
+        } else {
+            Toast.makeText(this, "FM应用未安装", Toast.LENGTH_SHORT).show();
+            onSelectResult(false);
+            finish();
+        }
 
-	}
+    }
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		txtFmResult.setVisibility(View.VISIBLE);
-		super.onActivityResult(requestCode, resultCode, data);
-	}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        txtFmResult.setVisibility(View.VISIBLE);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
 }
