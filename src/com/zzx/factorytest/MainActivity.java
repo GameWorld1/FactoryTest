@@ -10,6 +10,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.zzx.factorytest.manager.BluetoothManager;
 import com.zzx.factorytest.manager.FactoryTestManager;
+import com.zzx.factorytest.view.SerialPortDialog;
 
 import java.util.HashMap;
 
@@ -44,6 +46,7 @@ public class MainActivity extends Activity implements OnClickListener {
         PLATFORM_ID.put("T71L", "M4082");
         PLATFORM_ID.put("T800A", "T80");
         PLATFORM_ID.put("SOTEN_XL01A", "S50");
+        PLATFORM_ID.put("L501C", "T71V3");
     }
 
     @Override
@@ -127,21 +130,31 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.addSubMenu(1, 1, 1, "重新生成配置文件");
-
-
-
-
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_gyroscope, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == 1) {
+
+        if (item.getItemId() == R.id.menu_gernal_configfile) {
             FactoryTestManager.getInstance(this).gernalConfigFile();
+            Toast.makeText(this, "生成成功!", Toast.LENGTH_SHORT).show();
         }
-        Toast.makeText(this, "生成成功!", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.menu_configuration_serialport) {
+            createDialog();
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    public void serialport(View view) {
+        createDialog();
+    }
+
+    private void createDialog() {
+        new SerialPortDialog(this).show();
     }
 
     public String getVersion() {

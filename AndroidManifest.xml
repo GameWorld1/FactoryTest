@@ -4,7 +4,8 @@
     android:sharedUserId="android.uid.system"
     android:versionCode="1"
     android:versionName="1.0.6">
-    <!-- android:versionName="1.0"     android:sharedUserId="android.uid.system" -->
+    <!-- android:versionName="1.0"
+       android:sharedUserId="android.uid.system"-->
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="15" />
@@ -112,12 +113,11 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape">
-
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden">
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 -->
@@ -133,7 +133,11 @@
         <activity
             android:name=".LCDActivity"
             android:label="@string/title_activity_main"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape">
+
+
+        </activity>
+
         <activity android:name=".VibrateTestActivity" />
         <activity
             android:name=".MultiTouchActivity"

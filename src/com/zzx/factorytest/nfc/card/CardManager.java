@@ -20,6 +20,7 @@ import android.content.res.Resources;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
+import android.nfc.tech.MifareClassic;
 import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.os.Parcelable;
@@ -28,66 +29,73 @@ import android.util.Log;
 import com.zzx.factorytest.nfc.card.pboc.PbocCard;
 
 public final class CardManager {
-	// private static final String SP =
-	// "<br />------------------------------<br /><br />";
-	private static final String SP = "<br />------------------------------</b><br />";
+    // private static final String SP =
+    // "<br />------------------------------<br /><br />";
+    private static final String SP = "<br />------------------------------</b><br />";
 
-	public static String[][] TECHLISTS;
-	public static IntentFilter[] FILTERS;
+    public static String[][] TECHLISTS;
+    public static IntentFilter[] FILTERS;
 
-	static {
-		try {
-			TECHLISTS = new String[][] { { IsoDep.class.getName() },
-					{ NfcV.class.getName() }, { NfcF.class.getName() }, };
+    static {
+        try {
+            TECHLISTS = new String[][]{{IsoDep.class.getName()},
+                    {NfcV.class.getName()}, {NfcF.class.getName()},};
 
-			FILTERS = new IntentFilter[] { new IntentFilter(
-					NfcAdapter.ACTION_TECH_DISCOVERED, "*/*") };
-		} catch (Exception e) {
-		}
-	}
+            FILTERS = new IntentFilter[]{new IntentFilter(
+                    NfcAdapter.ACTION_TECH_DISCOVERED, "*/*")};
+        } catch (Exception e) {
+        }
+    }
 
-	public static String buildResult(String n, String i, String d, String x) {
-		if (n == null)
-			return null;
+    public static String buildResult(String n, String i, String d, String x) {
+        if (n == null)
+            return null;
 
-		final StringBuilder s = new StringBuilder();
+        final StringBuilder s = new StringBuilder();
 
-		// s.append("<br/><b>").append(n).append("</b>");
-		s.append(n);
+        // s.append("<br/><b>").append(n).append("</b>");
+        s.append(n);
 
-		if (d != null)
-			s.append(SP).append(d);
+        if (d != null)
+            s.append(SP).append(d);
 
-		if (x != null)
-			s.append(SP).append(x);
+        if (x != null)
+            s.append(SP).append(x);
 
-		if (i != null)
-			s.append(SP).append(i);
+        if (i != null)
+            s.append(SP).append(i);
 
-		return s.toString();
-	}
+        return s.toString();
+    }
 
-	public static String load(Parcelable parcelable, Resources res) {
-		final Tag tag = (Tag) parcelable;
+    public static String load(Parcelable parcelable, Resources res) {
+        final Tag tag = (Tag) parcelable;
 
-		final IsoDep isodep = IsoDep.get(tag);
+        final IsoDep isodep = IsoDep.get(tag);
 
-		Log.d("NFCTAG", "ffff");// isodep.transceive("45".getBytes()).toString());
 
-		if (isodep != null) {
-			return PbocCard.load(isodep, res);
-		}
+        // isodep.transceive("45".getBytes()).toString());
 
-		final NfcV nfcv = NfcV.get(tag);
-		if (nfcv != null) {
-			return VicinityCard.load(nfcv, res);
-		}
+        if (isodep != null) {
+            return PbocCard.load(isodep, res);
+        }
 
-		final NfcF nfcf = NfcF.get(tag);
-		if (nfcf != null) {
-			return OctopusCard.load(nfcf, res);
-		}
+        final NfcV nfcv = NfcV.get(tag);
+        if (nfcv != null) {
+            return VicinityCard.load(nfcv, res);
+        }
 
-		return null;
-	}
+        final NfcF nfcf = NfcF.get(tag);
+        if (nfcf != null) {
+            return OctopusCard.load(nfcf, res);
+        }
+
+        MifareClassic mc = MifareClassic.get(tag);
+        if (null != mc) {
+            Log.d("NFCTAG", mc.toString());
+        }
+
+
+        return null;
+    }
 }

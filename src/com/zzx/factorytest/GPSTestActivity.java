@@ -73,8 +73,8 @@ public class GPSTestActivity extends TestItemBaseActivity implements
         initView();
         addListener();
 
-        gpsManager.stopGPS();
-        gpsManager.startBeiDou();
+//        gpsManager.stopGPS();
+//        gpsManager.startBeiDou();
 
         gpsManager.startGPS();
 

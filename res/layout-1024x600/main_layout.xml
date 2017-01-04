@@ -44,7 +44,14 @@
         android:text="恢复出厂设置"
         android:textSize="25sp"
         android:visibility="gone" />
-
+    <Button
+        android:id="@+id/serial_port"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginBottom="5dip"
+        android:text="配置串口"
+        android:onClick="serialport"
+        android:textSize="25sp" />
     <Button
         android:id="@+id/btn_exit"
         android:layout_width="match_parent"

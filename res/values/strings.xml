@@ -127,4 +127,9 @@
     <string name="gyroscope_x">X:%f</string>
     <string name="gyroscope_y">Y:%f</string>
     <string name="gyroscope_z">Z:%f</string>
+
+    <!-- 菜单 -->
+    <string name="menu_gernal_configfile">生成配置文件</string>
+    <string name="menu_configuration_serialport">配置串口</string>
+    <string name="configuration_serialport_dialog_title">配置串口</string>
 </resources>

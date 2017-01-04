@@ -21,6 +21,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
@@ -315,7 +316,6 @@ public class RegTestActivity extends TestItemBaseActivity {
                 throws IllegalArgumentException {
 
             String ret = "";
-
             try {
 
                 ClassLoader cl = context.getClassLoader();

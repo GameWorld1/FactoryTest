@@ -47,6 +47,8 @@ public class PowerActivity extends TestItemBaseActivity {
         mMaps.put("T80", "");
         mMaps.put("S50", "");
         mMaps.put("M4082", "");
+        mMaps.put("T71V3", "/sys/devices/platform/mt-battery/BatteryNotify");
+
 
     }
 

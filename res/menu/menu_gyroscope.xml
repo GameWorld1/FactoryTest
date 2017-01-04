@@ -2,8 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.zzx.factorytest.GyroscopeActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/menu_gernal_configfile"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings" />
+        android:title="@string/menu_gernal_configfile" />
+    <item
+        android:id="@+id/menu_configuration_serialport"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_configuration_serialport" />
 </menu>

@@ -46,13 +46,22 @@
         android:visibility="gone" />
 
     <Button
+        android:id="@+id/serial_port"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="5dip"
+        android:text="配置串口"
+        android:onClick="serialport"
+        android:textSize="20sp" />
+
+    <Button
         android:id="@+id/btn_exit"
         android:layout_width="match_parent"
         android:layout_height="40dip"
         android:layout_margin="5dip"
         android:background="@drawable/btn_exit_bg"
         android:text="退出"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/version"
