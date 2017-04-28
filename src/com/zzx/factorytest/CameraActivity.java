@@ -1,7 +1,5 @@
 package com.zzx.factorytest;
 
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +19,8 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.zzx.factorytest.view.Preview;
+
+import java.util.List;
 
 public class CameraActivity extends TestItemBaseActivity implements
         OnCheckedChangeListener {
@@ -135,13 +135,13 @@ public class CameraActivity extends TestItemBaseActivity implements
 
 
         mCamera = Camera.open(mCurrentCamera);
-        if ("T80".equals(MainActivity.CURRENT_PLATFORM)) {
-
-            if (cameraInfo.facing == CameraInfo.CAMERA_FACING_FRONT) {
-                mCamera.setDisplayOrientation(180);
-            }
-
-        }
+//        if ("T80".equals(MainActivity.PLATFORM)) {
+//
+//            if (cameraInfo.facing == CameraInfo.CAMERA_FACING_FRONT) {
+//                mCamera.setDisplayOrientation(180);
+//            }
+//
+//        }
         Parameters parameter = mCamera.getParameters();
         if (isFlashOpen) {
             parameter.setFlashMode(Parameters.FLASH_MODE_TORCH);

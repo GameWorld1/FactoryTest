@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zzx.factorytest"
-    android:sharedUserId="android.uid.system"
     android:versionCode="1"
-    android:versionName="1.0.6">
+    android:versionName="1.0.7">
     <!-- android:versionName="1.0"
        android:sharedUserId="android.uid.system"-->
     <uses-sdk
@@ -113,6 +112,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="stateHidden">
             <!--
@@ -120,70 +120,138 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
--->
+            -->
         </activity>
         <activity
             android:name=".SingalTestActivity"
-            android:label="@string/title_activity_main"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:screenOrientation="landscape" />
         <activity
             android:name=".MICPhoneTestActivity"
-            android:label="@string/title_activity_main"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:screenOrientation="landscape" />
         <activity
             android:name=".LCDActivity"
-            android:label="@string/title_activity_main"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:screenOrientation="landscape">
 
 
         </activity>
 
-        <activity android:name=".VibrateTestActivity" />
+        <activity
+            android:name=".VibrateTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MultiTouchActivity"
-            android:configChanges="keyboard|keyboardHidden|navigation|orientation" />
-        <activity android:name=".MagneticFieldActivity">
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MagneticFieldActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".BluetoochTestActivity" />
+        <activity
+            android:name=".BluetoochTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".TestGridActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="landscape" />
-        <activity android:name=".GravityActivity" />
-        <activity android:name=".GPSTestActivity">
+        <activity
+            android:name=".GravityActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GPSTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".PowerActivity" />
-        <activity android:name=".GPIOActivity" />
-        <activity android:name=".KeysActivity" />
-        <activity android:name=".HeadPhoneActivity" />
-        <activity android:name=".LightActivity" />
-        <activity android:name=".FMTestActivity" />
-        <activity android:name=".SIMActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".SdcardActivity" />
-        <activity android:name=".SpeakerActivity" />
-        <activity android:name="._3GActivity" />
-        <activity android:name=".AgeingActivity" />
-        <activity android:name=".RegTestActivity" />
-        <activity android:name=".TpCalActivity" />
-        <activity android:name=".WifiTestActivity" />
+        <activity
+            android:name=".PowerActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GPIOActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KeysActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".HeadPhoneActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LightActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FMTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SIMActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AS60xFingerprintActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".IdentityCardActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".CameraActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SdcardActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SpeakerActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="._3GActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AgeingActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RegTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".TpCalActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".WifiTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".LCDFullScreenActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape" />
         <activity
-            android:name=".FingerprintActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity android:name=".NfcTestActivity">
+            android:name=".NfcTestActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape">
             <!--
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
@@ -202,10 +270,14 @@
         </activity>
         <activity
             android:name=".LightSensorActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
         <activity
             android:name=".TestResultActivity"
-            android:label="测试结果" />
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
+            android:label="测试结果"
+            android:screenOrientation="landscape" />
 
         <receiver android:name=".receiver.SecretReceiver">
             <intent-filter>
@@ -219,8 +291,9 @@
 
         <activity
             android:name=".GyroscopeActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation"
             android:label="@string/title_activity_gyroscope"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.zzx.factorytest.TestItemBaseActivity" />

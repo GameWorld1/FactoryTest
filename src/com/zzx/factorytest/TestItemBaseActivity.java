@@ -40,8 +40,8 @@ public class TestItemBaseActivity extends Activity implements OnResultSelected,
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.onCreate(savedInstanceState);
         judgeview = (JudgeView) findViewById(R.id.judgeview);
         if (judgeview != null) {
@@ -58,10 +58,8 @@ public class TestItemBaseActivity extends Activity implements OnResultSelected,
 
             @Override
             public void run() {
-
                 Log.i("test", "----------------测试超时");
                 stopAutoTest(false);
-
             }
         };
         String testMode = "";

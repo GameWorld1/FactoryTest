@@ -49,7 +49,7 @@ public class GPSManager {
         if (!gpsEnabled) {
             // 启动GPS
             Settings.Secure.setLocationProviderEnabled(mContext.getContentResolver(), LocationManager.GPS_PROVIDER, true);
-            //           Settings.Secure.setLocationProviderEnabled(mContext.getContentResolver(), LocationManager.NETWORK_PROVIDER, true);
+            //  Settings.Secure.setLocationProviderEnabled(mContext.getContentResolver(), LocationManager.NETWORK_PROVIDER, true);
             Log.d(TAG, "GPS启动：" + isGPSEnable());
         }
 

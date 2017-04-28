@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.zzx.factorytest.view.JudgeView
+        android:id="@+id/JudgeView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/JudgeView"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Opendevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开设备"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/CapFingers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="指纹采集"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fingerImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/btn_layout"
+        android:scaleType="centerInside"
+        android:src="@drawable/finger_mask" />
+
+</RelativeLayout>

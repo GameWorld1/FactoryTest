@@ -191,7 +191,7 @@ public class FileUtils {
     /**
      * Saves an Array of Entries to the specified location on the sdcard
      * 
-     * @param ds
+     * @param entries
      * @param path
      */
     public static void saveToSdCard(List<Entry> entries, String path) {

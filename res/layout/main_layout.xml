@@ -51,7 +51,6 @@
         android:layout_height="45dip"
         android:layout_marginBottom="5dip"
         android:text="配置串口"
-        android:onClick="serialport"
         android:textSize="20sp" />
 
     <Button

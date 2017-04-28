@@ -13,7 +13,6 @@ public class SecretReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent arg) {
 
         if (arg.getAction().equals("android.provider.Telephony.SECRET_CODE")) {
-            Log.i("test", "----------------����Ӧ��");
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.setClass(context, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK

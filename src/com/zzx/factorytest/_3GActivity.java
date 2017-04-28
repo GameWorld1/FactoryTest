@@ -6,15 +6,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
+import android.telephony.CellLocation;
 import android.telephony.PhoneStateListener;
 import android.telephony.ServiceState;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
+import android.telephony.cdma.CdmaCellLocation;
 import android.telephony.gsm.GsmCellLocation;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zzx.factorytest.manager.FactoryTestManager;
 import com.zzx.factorytest.view.SignalView;
@@ -37,6 +40,7 @@ public class _3GActivity extends TestItemBaseActivity implements Callback {
     private TextView txt2gSwitch;
     private TextView txt_correct;
     private GsmCellLocation gsmCellLocation;
+    private CdmaCellLocation cdmaCellLocation;
     private TelephonyManager telephonyManager;
     private ProgressBar singal_strength;
     private Handler mHandler;
@@ -101,6 +105,7 @@ public class _3GActivity extends TestItemBaseActivity implements Callback {
 
         // signalView.getViewSize(360);
         // signalView.myGraphWidth = 400;
+
         init();
     }
 
@@ -114,7 +119,17 @@ public class _3GActivity extends TestItemBaseActivity implements Callback {
 
 
         telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        gsmCellLocation = (GsmCellLocation) telephonyManager.getCellLocation();
+
+        CellLocation cellLocation = telephonyManager.getCellLocation();
+
+        if (cellLocation instanceof GsmCellLocation){
+            gsmCellLocation = (GsmCellLocation) cellLocation;
+        }else if(cellLocation instanceof CdmaCellLocation){
+            cdmaCellLocation = (CdmaCellLocation)cellLocation;
+        }
+
+
+
         if (gsmCellLocation != null) {
             txt_service.setText(gsmCellLocation.getCid() + "");
             txt_location.setText(gsmCellLocation.getLac() + "");
@@ -467,7 +482,12 @@ public class _3GActivity extends TestItemBaseActivity implements Callback {
 
     @Override
     public boolean handleMessage(Message msg) {
-        gsmCellLocation = (GsmCellLocation) telephonyManager.getCellLocation();
+        CellLocation cellLocation = telephonyManager.getCellLocation();
+        if (cellLocation instanceof GsmCellLocation){
+            gsmCellLocation = (GsmCellLocation) cellLocation;
+        }else if(cellLocation instanceof CdmaCellLocation){
+            cdmaCellLocation = (CdmaCellLocation)cellLocation;
+        }
         if (hasGetSingal) {
             signalView.onSignalChanged(strength);
         }

@@ -42,12 +42,12 @@ import java.util.Iterator;
 public class GPSTestActivity extends TestItemBaseActivity implements
         OnClickListener, YAxisValueFormatter, OnChartValueSelectedListener, GpsStatus.Listener, LocationListener, Handler.Callback, GpsStatus.NmeaListener, ValueFormatter {
     public static final int CRITICALITY = 1 << 13;
-    public static final String TAG = "safsaf";
+    public static final String TAG = "javen";
     public static final int DEFAULT_INIT = 12;
     private BarChart mBarChart;
 
-    private final int AUTO_TEST_TIMEOUT = 15;// 锟皆讹拷锟斤拷锟皆筹拷时时锟斤拷
-    private final int AUTO_TEST_MINI_SHOW_TIME = 5;// 锟皆讹拷锟斤拷锟皆筹拷时时锟斤拷
+    private final int AUTO_TEST_TIMEOUT = 15;//
+    private final int AUTO_TEST_MINI_SHOW_TIME = 5;//
     private GPSManager gpsManager;
     private Button mSwitchBtn;
     private TextView mLogcat;
@@ -78,7 +78,7 @@ public class GPSTestActivity extends TestItemBaseActivity implements
 
         gpsManager.startGPS();
 
-        setBtnContent(false);
+        setBtnContent(true);
     }
 
 
